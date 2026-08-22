@@ -1,7 +1,7 @@
 ## ESPAÑOL
 ## Cómo funciona
 
-AeroFlash se compone de dos partes: el motor que reproduce los `.swf` con aceleración GPU, y el launcher visual que permite elegir qué swf abrir.
+AeroFlash se compone de dos partes: el motor que reproduce los `.swf` con aceleración GPU, y el launcher visual "Cascade" que permite elegir qué swf abrir.
 
 ### El reproductor: `sdl2test-tb`
 
