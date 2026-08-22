@@ -4,7 +4,7 @@
 
 A Flash (.swf) player for the R36S with real GPU acceleration (Mali-G31 via DRM/GBM/EGL), built on Ruffle and adapted from the ruffle-miyooflip port. Avoids the freezing caused by software rendering fallback that the official Ruffle player runs into on this hardware.
 This application has only been tested on the dArkOS R36S system. Any variations would need to be within the RK3326 SoC platform or ARM Linux 4.19 kernel.
-The "EXIT" action in .swf its #`very buggy`, needs to press "RESET" button to restart AeroFlash or play another swf.
+The "EXIT" action in .swf its `very buggy`, needs to press "RESET" button to restart AeroFlash or play another swf.
 
 ## Installation
 
