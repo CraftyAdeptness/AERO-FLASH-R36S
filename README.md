@@ -62,9 +62,13 @@ ports/
 | select + X | switch R36S controls/mouse mode |
 | Select + A | EXIT to AeroFlash, very buggy need reset button sorry :( || 
 
-## Known Issues
+> [!NOTE]
+> ## Known Issues
 > - The "EXIT" action inside .swf its very buggy, needs to press "RESET" button to restart AeroFlash or play another swf
-- This issue is caused by the delegation/grappler of the screen currently in use by the GPU. I have the "Python alpha version" but it uses the CPU as the video backend and runs very slowly and tends to freeze. For now, you need to press "RESET" to correct exit.
+>- This issue is caused by the delegation/grappler of the screen currently in use by the GPU. I have the "Python alpha version" but it uses the CPU as the video backend and runs very slowly and tends to freeze. For now, you need to press "RESET" to correct exit.
+
+> [!IMPORTANT]
+> This is an early/experimental build. Some SWFs tend to fail for various reasons. They may require extra files from online addresses that no longer exist, or specific routines that used to work in web browsers back the time. Sometimes they simply fail and freeze because there may be instructions that are currently incompatible with ARM systems.
 
 ## Credits
 
