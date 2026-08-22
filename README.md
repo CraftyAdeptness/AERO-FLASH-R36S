@@ -42,14 +42,29 @@ ports/
 | Y | Enters the submenu  |
 | L/R | switches the submenu between Play, Edit Controls, Performance and About ||
 
+## Submenus
+| submenu | translate | color |
+|-------|--------|--------|
+| Jugar SWF | Play SWF | green |
+| Editar control | Controls Edit | yellow |
+| Rendimiento | Performance | purple |
+| Acerca de | About | pink |
+
+- **jugar swf**: This section launches the .swf files.
+- **Editar Control**: This section lets you edit the controls by binding the R36S’s built-in buttons in specific swf.
+- **Rendimiento**: This section lets you switch between “Low”, “Medium” and "default" to improve .swf performance and mute the audio.
+
 ## Controls in game/swf
 | Button | Action |
 |-------|--------|
 | D-pad | move cursor |
 | Y | Left mouse click |
-| select + X | switch R36S controls |
-| D-pad | exit to Aero Flash |
+| select + X | switch R36S controls/mouse mode |
 | Select + A | EXIT to AeroFlash, very buggy need reset button sorry :( || 
+
+## Known Issues
+> - The "EXIT" action inside .swf its very buggy, needs to press "RESET" button to restart AeroFlash or play another swf
+- This issue is caused by the delegation/grappler of the screen currently in use by the GPU. I have the "Python alpha version" but it uses the CPU as the video backend and runs very slowly and tends to freeze. For now, you need to press "RESET" to correct exit.
 
 ## Credits
 
