@@ -2,24 +2,27 @@
 
 ![AeroFlash en R36S](screenshot.png)
 
-Reproductor de Flash (.swf) para el R36S con aceleración GPU real (Mali-G31 vía DRM/GBM/EGL), basado en [Ruffle](https://ruffle.rs/) y adaptado del port [ruffle-miyooflip](https://github.com/USUARIO/ruffle-miyooflip). Evita el freeze del renderizado por software que sufre el reproductor de Ruffle oficial en este hardware.
+A Flash (.swf) player for the R36S with real GPU acceleration (Mali-G31 via DRM/GBM/EGL), built on Ruffle and adapted from the ruffle-miyooflip port. Avoids the freezing caused by software rendering fallback that the official Ruffle player runs into on this hardware.
 
-## Instalación
+## Installation
 
-1. Descarga el `.zip` de la [última Release](https://github.com/CraftyAdeptness/AERO-FLASH-R36S/releases/latest).
-2. Extrae el contenido dentro de `/roms/ports/` en tu tarjeta SD (o EASYROMS).
-3. Reinicia EmulationStation.
-4. AeroFlash aparecerá en la sección **Ports**.
+1. Download the `.zip` from the latest Release.
+2. Extract the contents into `/roms/ports/` on your SD card (EASYROMS partition or other custom dir with chmod permition ).
+3. Restart EmulationStation optional.
+4. AeroFlash will show up under the "Ports" section.
 
-## Controles
+## Controls
 
-| Botón | Acción |
+| Button | Action |
 |-------|--------|
-| A | Confirmar |
-| B | Salir del menú |
-| Select + B | Salir de AeroFlash |
+| A | Confirm |
+| B | Back out of menu/submenu |
+| X | Edit keymap for the selected .swf  |
+| Y | Enters the submenu  |
+| L/R | switches the submenu between Play, Edit Controls, Performance and About |
+| Select + Start | Exit AeroFlash |
 
-## Créditos
+## Credits
 
-- [Ruffle](https://github.com/ruffle-rs/ruffle) — motor de reproducción de Flash
-- [ruffle-miyooflip](https://github.com/USUARIO/ruffle-miyooflip) — base del renderizado DRM/GBM/EGL adaptada para este port
+- [Ruffle](https://github.com/ruffle-rs/ruffle) — Flash engine
+- [ruffle-miyooflip](https://github.com/aweigit/ruffle-miyooflip) — DRM/GBM/EGL rendering base adapted for this port
