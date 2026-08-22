@@ -11,6 +11,7 @@ This application has only been tested on the dArkOS R36S system. Any variations 
 2. Extract the contents into `/roms/ports/` on your SD card (EASYROMS partition or other custom dir with chmod permition ).
 3. Restart EmulationStation optional.
 4. AeroFlash will show up under the "Ports" section.
+5. AeroFlash includes its own file manager. You only need to place the .swf files along with their corresponding assets/.xml/contents that make them work in the `/roms` folder which is automatically generated on first launch.
 
 ## Controls
 
