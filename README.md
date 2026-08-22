@@ -40,6 +40,7 @@ ports/
 | Y | Enters the submenu  |
 | L/R | switches the submenu between Play, Edit Controls, Performance and About |
 | Select + Start | Exit AeroFlash |
+
 ## Controls in game/swf
 | Button | Action |
 |-------|--------|
