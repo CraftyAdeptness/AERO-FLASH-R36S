@@ -13,6 +13,23 @@ This application has only been tested on the dArkOS R36S system. Any variations 
 4. AeroFlash will show up under the "Ports" section.
 5. AeroFlash includes its own file manager. You only need to place the .swf files along with their corresponding assets/.xml/contents that make them work in the `/roms` folder which is automatically generated on first launch.
 
+Example of place .swf:
+```
+ports/
+├── AEROFLASH.sh
+└── AEROFLASH/
+    ├── cascade_launcher
+    ├── sdl2test-tb
+    ├── libgetGlFunc.so
+    ├── assets/
+    └── roms/
+        └──robo-rampage
+           ├──A-roborampage_original.swf <-- "This the game who need press "A" or "X" to edit his "keymap"
+           ├──assets
+           ├──robo-rampage__meta.xml
+           └──etc files...
+```
+
 ## Controls
 
 | Button | Action |
