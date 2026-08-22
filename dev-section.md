@@ -1,13 +1,14 @@
+## ESPAÑOL
 ## Cómo funciona
 
-AeroFlash se compone de dos partes: el motor que reproduce los `.swf` con aceleración GPU, y el launcher visual que permite elegir qué juego abrir.
+AeroFlash se compone de dos partes: el motor que reproduce los `.swf` con aceleración GPU, y el launcher visual que permite elegir qué swf abrir.
 
 ### El reproductor: `sdl2test-tb`
 
-El binario que realmente reproduce los archivos Flash es un fork de [ruffle-miyooflip](https://github.com/USUARIO/ruffle-miyooflip), escrito en Rust sobre el motor [Ruffle](https://ruffle.rs/). El objetivo era evitar el problema del reproductor oficial de Ruffle, que en este hardware cae a renderizado por software (llvmpipe) y se congela.
+El binario que realmente reproduce los archivos Flash es un fork de [ruffle-miyooflip]([https://github.com/USUARIO/ruffle-miyooflip](https://github.com/aweigit/ruffle-miyooflip)), escrito en Rust sobre el motor [Ruffle](https://ruffle.rs/). El objetivo era evitar el problema del reproductor oficial de Ruffle, que en este hardware cae a renderizado por software (llvmpipe) y se congela.
 
-- **Compilación cruzada:** el binario se compila para `aarch64-unknown-linux-gnu` vía GitHub Actions, ya que compilar Rust/Ruffle localmente no era viable en el hardware disponible.
-- **Renderizado directo por DRM/GBM/EGL:** en vez de pasar por X11, el binario abre `/dev/dri/card0` directamente, crea una superficie GBM real y dibuja sobre ella — esto es lo que permite usar la GPU Mali-G31 de verdad en vez de caer a software.
+- **Compilación cruzada:** el binario se compila para `aarch64-unknown-linux-gnu` vía GitHub Actions, ya que compilar Rust/Ruffle localmente no me era viable en el hardware que dispongo.
+- **Renderizado directo por DRM/GBM/EGL:** en vez de pasar por X11, el binario abre `/dev/dri/card0` directamente, crea una superficie GBM real y dibuja sobre ella, esto es lo que permite usar la GPU Mali-G31 de verdad en vez de caer a software CPU.
 - **El fix clave:** el código base intentaba crear la superficie EGL pasando una ventana nativa nula (funcionaba solo en el hardware original para el que se diseñó el fork), en vez de usar la implementación DRM/GBM que ya existía en el repo pero no estaba conectada al build. Corregir esa conexión fue lo que desbloqueó la aceleración real.
 - **Vinculación con el driver real:** el sistema traía únicamente stubs vacíos de EGL/GLES (los dispatchers genéricos de GLVND), sin conexión al driver real del fabricante. Fue necesario enlazar el binario directamente contra el blob de Mali (`libmali.so`) para que las llamadas gráficas realmente llegaran a la GPU.
 
