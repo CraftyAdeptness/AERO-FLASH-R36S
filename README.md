@@ -49,7 +49,7 @@ ports/
 | Y | Left mouse click |
 | select + X | switch R36S controls |
 | D-pad | exit to Aero Flash |
-| Select + A | EXIT to AeroFlash (very buggy need reset button sorry :( ) 
+| Select + A | EXIT to AeroFlash, very buggy need reset button sorry :( | 
 
 ## Credits
 
