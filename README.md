@@ -40,6 +40,12 @@ ports/
 | Y | Enters the submenu  |
 | L/R | switches the submenu between Play, Edit Controls, Performance and About |
 | Select + Start | Exit AeroFlash |
+## Controls in game/swf
+| Button | Action |
+|-------|--------|
+| D-pad | move cursor |
+| Y | Left mouse click |
+| select + X | switch R36S controls |
 
 ## Credits
 
